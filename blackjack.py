@@ -11,6 +11,7 @@ except ValueError:
     print("Not a number")
 
 if mode == 1:
+    bet_ammount=0
     print("You are playing as the dealer.")
     while len(dealer_cards)!=2:
         dealer_cards.append(random.randint(1,11))
@@ -115,7 +116,7 @@ else:
 
         if sum(dealer_cards)>21:
             print("Dealer is BUSTED! Player wins!")
-            if bet_ammount != 0:
+            if bet_ammount > 0:
                 bet_ammount = int(bet_ammount) * 2
                 print("You have won " + str(bet_ammount)+"$")
         elif sum(dealer_cards)== sum(player_cards):
@@ -124,14 +125,14 @@ else:
             print("Dealer has BLAKCJACK!")
         elif sum(player_cards)==21:
             print("You has BLACKJACK!")
-            if bet_ammount != 0:
+            if bet_ammount > 0:
                 bet_ammount = int(bet_ammount)* 2
                 print("You have won " + str(bet_ammount)+"$")
         elif sum(dealer_cards)>sum(player_cards):
             print("Dealer wins!")
         else:
             print("You win!")
-            if bet_ammount != 0:
+            if bet_ammount > 0:
                 bet_ammount = int(bet_ammount) * 2
                 print("You have won " + str(bet_ammount)+"$")
 
