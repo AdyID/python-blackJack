@@ -100,7 +100,7 @@ else:
             print("You have a total of " + str(sum(player_cards)) + " with ", player_cards)
             break
     if sum(player_cards) > 21:
-        print("Player is BUSTED! Dealer wins    `!")
+        print("Player is BUSTED! Dealer wins!")
     else:
         while sum(dealer_cards) < 21:
             daction = random.randint(1, 2)
@@ -117,7 +117,7 @@ else:
             print("Dealer is BUSTED! Player wins!")
             if bet_ammount != 0:
                 bet_ammount = int(bet_ammount) * 2
-                print("You have won " + bet_ammount+"$")
+                print("You have won " + str(bet_ammount)+"$")
         elif sum(dealer_cards)== sum(player_cards):
             print("Dealer wins!")
         elif sum(dealer_cards)==21:
@@ -126,12 +126,12 @@ else:
             print("You has BLACKJACK!")
             if bet_ammount != 0:
                 bet_ammount = int(bet_ammount)* 2
-                print("You have won " + bet_ammount+"$")
+                print("You have won " + str(bet_ammount)+"$")
         elif sum(dealer_cards)>sum(player_cards):
             print("Dealer wins!")
         else:
             print("You win!")
             if bet_ammount != 0:
                 bet_ammount = int(bet_ammount) * 2
-                print("You have won " + bet_ammount+"$")
+                print("You have won " + str(bet_ammount)+"$")
 
